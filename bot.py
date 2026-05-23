@@ -2,6 +2,7 @@ import logging
 import os
 import random
 
+from dotenv import load_dotenv
 from telegram import InlineKeyboardButton, InlineKeyboardMarkup, Update
 from telegram.constants import ParseMode
 from telegram.ext import (
@@ -17,6 +18,7 @@ logging.basicConfig(
     level=logging.INFO,
 )
 logger = logging.getLogger(__name__)
+load_dotenv()
 
 DRINKS = [
     ("Espresso", "A short and strong coffee for a quick reset."),
